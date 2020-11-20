@@ -2,7 +2,12 @@ import React from "react"
 import exclamation from "../assets/exclamation.png"
 
 export default class Pig extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
 
+        }
+    }
 
   panic = () => (<img className="exclamation" src={exclamation} alt="" />)
 
@@ -10,7 +15,7 @@ export default class Pig extends React.Component {
   render() {
     return(
       <div id={this.props.name} className="sheeple">
-        {null}
+        {this.props.environment ==="inhospitable" ? this.panic() : null }
       </div>
     )
   }
